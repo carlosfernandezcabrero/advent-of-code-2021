@@ -18,6 +18,8 @@ export function step1() {
             }
         }
     }
+
+    return 0;
 }
 
 export function get_sum_unmarked(table: number[][]) {
