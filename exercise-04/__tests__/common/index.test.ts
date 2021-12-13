@@ -1,6 +1,6 @@
-import { check_table, read_data } from "../src";
+import { check_table, read_data } from "../../src/common";
 
-describe("index file tests", () => {
+describe("Common file tests", () => {
     test("should be return 27 numbers", () => {
         const { numbers } = read_data("./data/input2.txt");
         expect(numbers.length).toBe(27);
