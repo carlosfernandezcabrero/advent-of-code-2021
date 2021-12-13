@@ -1,7 +1,10 @@
-import { check_table, read_data } from "..";
+import { join } from "path";
+import { check_table, read_data } from "../common";
 
 export function step1() {
-    const { tables, numbers } = read_data("./data/input.txt");
+    const { tables, numbers } = read_data(
+        join(__dirname, "/../../data/input.txt")
+    );
 
     for (const num of numbers) {
         for (const { table } of tables) {

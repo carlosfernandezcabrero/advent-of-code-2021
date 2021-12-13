@@ -1,4 +1,5 @@
-import { check_table, read_data } from "..";
+import { join } from "path";
+import { check_table, read_data } from "../common";
 
 type WinTablesType = {
     table: string[];
@@ -7,7 +8,9 @@ type WinTablesType = {
 
 export function step2() {
     const win_tables: WinTablesType[] = [];
-    const { tables, numbers } = read_data("./data/input.txt");
+    const { tables, numbers } = read_data(
+        join(__dirname, "/../../data/input.txt")
+    );
 
     numbers.forEach((num) => {
         for (let tableType = 0; tableType < tables.length; tableType++) {
