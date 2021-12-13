@@ -17,7 +17,7 @@ export function step1() {
     }
 }
 
-function get_sum_unmarked(table: number[][]) {
+export function get_sum_unmarked(table: number[][]) {
     let sum = 0;
     table.forEach((row) => {
         row.forEach((num) => {

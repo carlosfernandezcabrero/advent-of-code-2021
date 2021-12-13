@@ -36,7 +36,7 @@ export function step2() {
     return get_sum_unmarked(table) * num;
 }
 
-function get_sum_unmarked(table: string[]): number {
+export function get_sum_unmarked(table: string[]): number {
     let sum = 0;
     table.forEach((row) => {
         row.split(",").forEach((num) => {
