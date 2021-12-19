@@ -1,0 +1,33 @@
+{
+    "name": "exercise-06",
+    "version": "1.0.0",
+    "description": "exercise 6 of advent of code 2021",
+    "main": "src/index.ts",
+    "author": "carlos fernandez cabrero",
+    "license": "ISC",
+    "scripts": {
+        "dev": "ts-node ./src/index.ts",
+        "lint:src": "eslint --ext .ts ./src",
+        "lint:test": "eslint --ext .ts ./__tests__",
+        "lint": "npm run lint:src && npm run lint:test",
+        "lint:fix:src": "eslint --ext .ts --fix ./src",
+        "lint:fix:test": "eslint --ext .ts --fix ./__tests__",
+        "lint:fix": "npm run lint:fix:src && npm run lint:fix:test",
+        "test": "jest --verbose",
+        "test:coverage": "jest --coverage"
+    },
+    "devDependencies": {
+        "@types/jest": "^27.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.6.0",
+        "@typescript-eslint/parser": "^5.6.0",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^27.4.4",
+        "just-clone": "^5.0.1",
+        "prettier": "^2.5.1",
+        "ts-jest": "^27.1.1",
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.3"
+    }
+}
