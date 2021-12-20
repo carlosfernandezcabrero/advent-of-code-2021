@@ -1,0 +1,40 @@
+{
+    "name": "exercise7",
+    "version": "1.0.0",
+    "description": "Exercise 7",
+    "main": "src/index.js",
+    "scripts": {
+        "dev": "babel-node -r dotenv/config src/index.js",
+        "dev:watch": "nodemon --exec babel-node -r dotenv/config src/index.js",
+        "build": "npx babel ./src/ --out-dir ./dist/",
+        "start": "npm run build && node -r dotenv/config dist/index.js",
+        "config": "babel-node update-package-json.js",
+        "lint:src": "eslint --ext .js ./src",
+        "lint:test": "eslint --ext .js ./__tests__",
+        "lint": "npm run lint:src && npm run lint:test",
+        "lint:fix:src": "eslint --ext .js --fix ./src",
+        "lint:fix:test": "eslint --ext .js --fix ./__tests__",
+        "lint:fix": "npm run lint:fix:src && npm run lint:fix:test",
+        "test": "jest --verbose",
+        "test:coverage": "jest --coverage"
+    },
+    "author": "carlos fernandez cabrero",
+    "license": "ISC",
+    "dependencies": {
+        "dotenv": "^10.0.0"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.16.0",
+        "@babel/core": "^7.16.5",
+        "@babel/node": "^7.16.5",
+        "@babel/preset-env": "^7.16.5",
+        "@types/jest": "^27.0.3",
+        "babel-jest": "^27.4.5",
+        "eslint": "^7.32.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "jest": "^27.4.5",
+        "nodemon": "^2.0.14",
+        "prettier": "2.4.1"
+    }
+}
